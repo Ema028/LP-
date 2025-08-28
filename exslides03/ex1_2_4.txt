@@ -1,0 +1,57 @@
+1.
+O que é um tipo de dados?
+
+R: Natureza ou classificação de um dado.
+
+Para que servem os tipos?
+
+R: Controlar quanto da memória cada valor ocupa, impedir operações inválidas e tornar o programa mais legível e seguro.
+
+2.
+Considere o programa a seguir:
+
+#include <stdio.h>
+void main (void) {
+    printf("Soma = %d\n", 100-"10");
+}
+O que você espera que aconteça ao compilar o programa? Por quê?
+
+R: Não vai compilar, pois subtrai 2 variáveis de tipos diferentes
+
+Quais são os tipos dos operandos na operação de subtração?
+
+R: Um número inteiro e um ponteiro para uma cadeia de caracteres.
+
+Transcreva a mensagem de erro de compilação e a explique.
+
+R:
+mensagem de erro:
+C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: C:/msys64/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../lib/libmingw32.a(lib64_libmingw32_a-crtexewin.o): in function `main':
+C:/M/B/src/mingw-w64/mingw-w64-crt/crt/crtexewin.c:67:(.text.startup+0xc5): undefined reference to `WinMain'
+collect2.exe: error: ld returned 1 exit status
+
+Como o computador aqui de casa é windows, o compilador não encontrou a main e procurou WinMain que é para entrada de programas gráficos no windows.
+
+No computador do laboratório:
+warning: initialization of 'const char *' from 'char' makes pointer from integer without a cast
+error: invalid operands to binary - (have 'int' and 'const char *')
+
+Não consegue fazer a subtração entre variáveis de tipos diferentes.
+
+4.
+
+Qual é a diferença entre tipagem estática e dinâmica?
+
+R: Na tipagem estática o tipo das variáveis é declarado pelo programador, pré-determinado na compilação e na tipagem dinâmica o tipo é como se fosse "implícito", o programa determina o tipo durante a execução.
+
+
+Dê exemplos de linguagens que usem tipagem estática e exemplos de linguagens que usem tipagem dinâmica.
+
+R: 
+Estática: C, C++.
+
+Dinâmica: Python, JavaScript.
+
+Por quê uma linguagem com tipagem estática é tipicamente mais rápida do que uma com tipagem dinâmica? Justifique usando um exemplo.
+
+R; Porque em linguagens dinâmicas, o interpretador precisa descobrir em tempo real o tipo de cada variável antes de executar uma operação
