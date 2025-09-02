@@ -20,10 +20,10 @@ int main()
     int pontos = 0;
     for(int i = 0; i < 20; i++)
     {
-        get_sized_string("Qual o nome do time\n", times[i].nome, 16);
-        pontos += 3* get_int("Qual a quantidade de vitórias?\n");
-        pontos += get_int("Qual a quantidade de empates?\n");
-        pontos += 0* get_int("Qual a quantidade de derrotas?\n");
+        get_sized_string("Qual o nome do time", times[i].nome, 16);
+        pontos += 3* get_int("Qual a quantidade de vitórias?");
+        pontos += get_int("Qual a quantidade de empates?");
+        pontos += 0* get_int("Qual a quantidade de derrotas?");
         times[i].pontos = tmp[i].pontos = pontos;
         times[i].id = tmp[i].id = i;
     }
