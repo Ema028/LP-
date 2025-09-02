@@ -5,6 +5,7 @@
 #define false 1
 
 int eh_primo(int n);
+int get_int(char* string);
 
 int main()
 {
