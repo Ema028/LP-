@@ -1,4 +1,4 @@
-#include <stdio.h>
+/*#include <stdio.h>
 #include <stdlib.h>
 
 int get_int(char* string);
@@ -61,4 +61,66 @@ int compare(const void* a, const void* b)
     time* A = (time*)a;
     time* B = (time*)b;
     return (A->pontos - B->pontos);
+}
+*/
+
+//versão básica
+#include <stdio.h>
+
+#define times 20
+
+int get_int(char* string);
+char* get_sized_string(char* text, char* nome);
+
+int main()
+{
+    char nome1[255];
+    char nome2[255];
+
+    int maior_pont = 0;
+    int menor_pont = 0;
+    int tmp_pont = 0;
+
+    char* tmp1 = NULL;
+    char* tmp2 = NULL;
+
+    for(int i = 0; i < times; i++)
+    {
+        tmp_pont = 0;
+        tmp_pont += 3* get_int("Qual a quantidade de vitórias?");
+        tmp_pont += get_int("Qual a quantidade de empates?");
+        tmp_pont += 0* get_int("Qual a quantidade de derrotas?");
+        if (i == 0){
+            tmp1 = get_sized_string("Qual o nome do time", nome1);
+            tmp2 = tmp1;
+            maior_pont = tmp_pont;
+            menor_pont = tmp_pont;
+        }else{
+            if(tmp_pont > maior_pont){
+                tmp1 = get_sized_string("Qual o nome do time", nome1);
+                maior_pont = tmp_pont;
+            }else if(tmp_pont < menor_pont){
+                tmp2 = get_sized_string("Qual o nome do time", nome2);
+                menor_pont = tmp_pont;
+            }
+        }
+    }
+
+    printf("menor pontuação: %d, %s\nmaior pontuação: %d, %s", menor_pont, tmp1, maior_pont, tmp2);
+    return 0;
+}
+
+int get_int(char* string)
+{
+    int num;
+    printf("%s\n", string);
+    scanf("%d", &num);
+    return num;
+}
+
+char* get_sized_string(char* text, char* nome)
+{
+    printf("%s\n", text);
+    scanf("%s", nome);
+    return nome;
 }
