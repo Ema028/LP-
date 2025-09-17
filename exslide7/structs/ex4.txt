@@ -1,0 +1,9 @@
+No exercício 2 as informações são passadas da função para a main por valor, 
+gastando mais memória e tempo, já que a função vai ter que criar um struct local,
+preencher com as informações e depois a struct inteira é copiada na memória.
+
+Já no exercício 3 um ponteiro para a struct é passado e as informações coletadas
+são colocadas diretamente ali na struct que já existe no programa principal.
+
+Eu considero melhor dar preferência para a abordagem do exercício 3, 
+por ser mais eficiente.
