@@ -8,7 +8,6 @@ typedef struct Jogador{
 }jogador;
 
 void print_jogador(jogador* player);
-void print_string(char* frase, char* string);
 
 int main(){
     jogador messi = {"Lionel Messi", "atacante", 54 ,10};
@@ -22,18 +21,8 @@ int main(){
 
 
 void print_jogador(jogador* player){
-    print_string("Nome do atleta: ", player -> nome);
-    print_string("Posição do atleta: ", player -> posicao);
+    printf("Nome do atleta: %s\n", player -> nome);
+    printf("Posição do atleta: %s\n", player -> posicao);
     printf("Código do país: %d\n", player ->codigo_país);
     printf("Número da camisa: %d\n\n", player -> camisa);
-}
-
-void print_string(char* frase, char* string){
-    printf("%s", frase);
-    int i = 0;
-    while(string[i] != '\0'){
-        printf("%c", string[i]);
-        i++;
-    }
-    printf("\n");
 }
