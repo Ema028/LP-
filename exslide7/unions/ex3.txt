@@ -1,0 +1,3 @@
+A União discriminada é uma estrutura de dados, que além da union guarda o subtipo que está sendo usado no momento, 
+ela é necessária porque uma união comum permite armazenar diferentes tipos de dados no mesmo espaço de memória,
+e não guarda informação sobre qual tipo está sendo usado, logo o programa poderia tentar acessar o tipo errado e gerar comportamento indefinido.
