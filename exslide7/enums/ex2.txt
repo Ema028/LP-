@@ -1,0 +1,1 @@
+como utilizei enum originalmente nos exercícios 4, 5 e 7 não havia mudanças a fazer.
