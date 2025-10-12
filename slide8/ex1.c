@@ -5,7 +5,7 @@ int main()
 {   
     char string[32];
     printf("Diga uma palavra: ");
-    scanf("%s", string);
+    scanf("%25s", string);
 
     int size = strlen(string);
 

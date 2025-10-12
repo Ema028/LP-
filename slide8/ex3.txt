@@ -1,0 +1,5 @@
+Ao escrever no arquivo o \0 não é colocado,
+a menos que seja um arquivo binário, já que não faz parte do texto, 
+só indica o fim da string na memória,
+mas para ler um arquivo, é preciso terminar com \0, 
+para não causar erros ou comportamento indefinido.
