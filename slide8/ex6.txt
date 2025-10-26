@@ -1,0 +1,3 @@
+Não houve mudança de comportamento.
+Isso porque o programa trabalha apenas com texto simples.
+O modo binário só faz diferença quando há conversões automáticas de fim de linha, mas neste caso os dados são gravados e lidos do mesmo jeito.
