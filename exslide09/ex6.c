@@ -9,6 +9,10 @@ struct Caixa {
   struct Caixa* prox;
 };
 
+/* como não é permitido alocação dinâmica de memória 
+ * e precisa ser uma assinatura específica
+ * (sem passar um ponteiro para uma caixa já criada),
+ * usa uma reserva global de caixas vazias para funcionar */
 int usados = 0;
 struct Caixa caixas[TAM_MAX];
 
