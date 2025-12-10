@@ -29,5 +29,6 @@ int main(){
     fwrite(buffer, sizeof(char), tamanho/2, f);
 
 	free(buffer);
+	fclose(f);
 	return 0;
 }
