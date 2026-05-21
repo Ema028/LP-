@@ -25,4 +25,4 @@
 
 ## 📚 Exercícios
 
-Os exercícios da disciplina estão organizados na pasta `/exercicios`
+Os exercícios da disciplina Linguagem de Programação 1 estão organizados na pasta `/exercicios`
